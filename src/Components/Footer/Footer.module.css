@@ -1,0 +1,221 @@
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--navy-blue);
+    color: var(--secondary-text-color);
+}
+
+.footerTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 3rem;
+    width: 90%;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.footerBottom {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 85%;
+    padding: 1.75rem 0;
+}
+
+.socialMediaWebsites {
+    display: flex;
+    gap: 16px;
+}
+
+.socialMediaSection {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    gap: 3rem;
+    justify-content: space-evenly;
+}
+
+.linksContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.iconWrapper {
+    display: flex;
+    padding: 0.6rem 0.54rem;
+    background-color: var(--secondary-text-color);
+    color: var(--aqua-blue);
+    border-radius: 50%;
+}
+.iconWrapper:hover {
+    background-color: var(--aqua-blue);
+    color: var(--secondary-text-color);
+}
+
+.linkSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 33.33%
+}
+
+.footerList {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: flex-start;
+}
+
+.listWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+.listWrapper:hover {
+    color: var(--aqua-blue);
+    transform: translateX(5px);
+}
+
+.copyRight {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+    .footerTop {
+        gap: 3rem;
+        padding: 10px;
+        justify-content: space-between;
+    }
+    .socialMediaSection {
+        width: 20%;
+    }
+    .linkSection {
+        width: 30%
+    }
+}
+
+@media (max-width: 864px) {
+    .footerTop {
+        flex-direction: column;
+        width: 100%;
+        font-size: 14px;
+    }
+    .linksContainer {
+        justify-content: space-evenly;
+    }
+    .linkSection {
+        align-items: center;
+    
+    }
+    .socialMediaSection {
+        height: 10vh;
+        align-items: center;
+        gap: 1rem;
+    }
+    .footerTop > * {
+        width: 100%;
+    }
+    .listWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerTop {
+        font-size: 12px;
+    }
+    .copyRight {
+        font-size: 0.625rem !important;
+    }
+    .socialMediaSection {
+        height: 5vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .copyRight {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 414px) {
+    .footerTop {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .footerTop {
+        padding-left: 10%;
+    }
+    .linksContainer {
+        flex-direction: column;
+    }
+    .linkSection {
+        width: 100%;
+        align-items: flex-start;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .footerTop {
+        padding-left: 5%;
+    }
+}
+
+@media (max-width: 375px) {
+    .socialMediaWebsites {
+        display: none;
+    }
+    .socialMediaWebsitesBottom {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 16px;
+    }
+    .copyRight {
+        display: none;
+    }
+    .footerBottom {
+        display: flex;
+        width: 85%; /* Maintain width */
+    }
+}
+
+/* Ensure social media icons are visible in footerBottom */
+@media (min-width: 375px) {
+    .socialMediaWebsitesBottom {
+        display: none;
+    }
+    .socialMediaSection {
+        height: 10vh;
+    }
+    .footerTop {
+        gap: 1rem;
+    }
+}

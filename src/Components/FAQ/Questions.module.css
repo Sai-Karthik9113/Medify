@@ -1,0 +1,40 @@
+.qaContainer {
+    display: flex;
+    flex-direction: column; /* Change to column on smaller screens */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.qaImage img {
+    width: 500px;
+}
+
+.qaList {
+    width: 100%; /* More flexible width */
+}
+
+@media (min-width: 768px) {
+    .qaContainer {
+        flex-direction: row; /* Back to row layout for larger screens */
+        justify-content: space-evenly;
+    }
+
+    .qaList {
+        width: 40%;
+    }
+
+    .qaImage img {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .qaList {
+        width: 40%; /* Restore original width on larger screens */
+    }
+    .qaImage img {
+        width: 500px;
+    }
+}
