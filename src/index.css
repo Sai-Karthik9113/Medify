@@ -2,12 +2,14 @@
   --primary-color: linear-gradient(81deg, #E7F0FF 9.01%, rgba(232, 241, 255, 0.47) 89.11%);
   --secondary-color: linear-gradient(81deg, #EFF5FE 9.01%, rgba(241, 247, 255, 0.47) 89.11%);
 
+
   --primary-text-color: #2AA8FF;
   --secondary-text-color: rgba(255, 255, 255, 1);
 
-  --aqua-blue: #2AA7FF;
-  --navy-blue: #1B3C74;
+  --aqua-blue: #2AA7FF; /* background: rgba(42, 167, 255, 1); */
+  --navy-blue: #1B3C74; /* background: rgba(27, 60, 116, 1); */
   --midnight-blue: rgba(16, 40, 81, 1);
+  --grayish-blue: rgba(119, 130, 157, 1);
 
   --base-font-family: 'Poppins', sans-serif;
 }

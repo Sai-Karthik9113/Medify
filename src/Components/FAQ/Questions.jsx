@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Typography } from "@mui/material";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { ReactComponent as HeartIcon } from '../../Assets/heart-icon.svg';
+import { ReactComponent as SmileyIcon } from '../../Assets/smiley.svg';
 import styles from './Questions.module.css';
 
 
@@ -33,44 +35,68 @@ const FrequentlyAskedQuestions = () => {
 
     return (
         <div className={styles.qaContainer}>
-            <div className={styles.qaImage}>
-                <img src={require('../../Assets/faq-image.png')} alt="FAQ" style={{ width: '350px' }} />
+            <div className={styles.qaHeading}>
+                <Typography variant="p" fontSize='16px' fontWeight='600' color="var(--aqua-blue)" marginBottom='2px'>
+                    Get Your Answer
+                </Typography>
+                <Typography variant="h3" fontFamily='var(--base-font-family)' fontWeight='600' color="var(--navy-blue)" sx={{ fontSize: 'clamp(24px, 4vw, 48px)' }}>
+                    Frequently Asked Questions
+                </Typography>
             </div>
-            <div className={styles.qaList}>
-                {
-                    faqs.map((faq, index) => (
-                        <Accordion key={index} 
-                            expanded={expanded === index} 
-                            onChange={handleChange(index)}
-                            sx={{
-                                boxShadow: "none", 
-                                border: "none", 
-                                "&:before": {
-                                  display: "none", 
-                                },
-                                backgroundColor: 'transparent',
-                                padding: '15px 10px',
-                                marginBottom: '10px'
-                            }}
-                        >
-                            <AccordionSummary
-                                expandIcon={expanded === index ? <FaMinus color="var(--aqua-blue)" /> : <FaPlus color="var(--aqua-blue)" />}
-                                aria-controls={`panel${index}-content`}
-                                id={`panel${index}-header`}
-                                sx={{ padding: '0', margin: '0' }}
+            <div className={styles.qaSection}>
+                <div className={styles.qaImage}>
+                    <div className={styles.safetyWithUsIcon}>
+                        <HeartIcon />
+                    </div>
+                    <img src={require('../../Assets/faq-image.png')} alt="FAQ" style={{ width: '350px' }} />
+                    <div className={styles.happyPatientCount}>
+                        <SmileyIcon style={{ width: 'clamp(30px, 5vw, 50px)', height: 'clamp(30px, 5vw, 50px)' }} />
+                        <div className={styles.cxCount}>
+                            <Typography variant="h5" fontFamily='var(--base-font-family)' fontWeight='600' color="var(--navy-blue)" style={{ fontSize: 'clamp(14px, 2vw, 28px)' }}>
+                                84k+
+                            </Typography>
+                            <Typography color="var(--grayish-blue)" style={{ fontSize: 'clamp(10px, 2vw, 17px)' }}>
+                                Happy Patients
+                            </Typography>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.qaList}>
+                    {
+                        faqs.map((faq, index) => (
+                            <Accordion key={index} 
+                                expanded={expanded === index} 
+                                onChange={handleChange(index)}
+                                sx={{
+                                    boxShadow: "none", 
+                                    border: "none", 
+                                    "&:before": {
+                                    display: "none", 
+                                    },
+                                    backgroundColor: 'transparent',
+                                    padding: '15px 10px',
+                                    marginBottom: '10px'
+                                }}
                             >
-                                <Typography fontFamily='var(--base-font-family)' textAlign='left' fontSize={{ xs: '0.875rem', sm: '1rem', md: '1.1875rem'  }} fontWeight='600' color="var(--navy-blue)">
-                                    {faq.question}
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography fontFamily='var(--base-font-family)' textAlign='left' fontSize={{ xs: '0.775rem', sm: '0.975rem', md: '1.0875rem'  }}>
-                                    {faq.answer}
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                    ))
-                }
+                                <AccordionSummary
+                                    expandIcon={expanded === index ? <FaMinus color="var(--aqua-blue)" /> : <FaPlus color="var(--aqua-blue)" />}
+                                    aria-controls={`panel${index}-content`}
+                                    id={`panel${index}-header`}
+                                    sx={{ padding: '0', margin: '0' }}
+                                >
+                                    <Typography fontFamily='var(--base-font-family)' textAlign='left' fontSize={{ xs: '0.875rem', sm: '1rem', md: '1.1875rem'  }} fontWeight='600' color="var(--navy-blue)">
+                                        {faq.question}
+                                    </Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography fontFamily='var(--base-font-family)' textAlign='left' fontSize={{ xs: '0.775rem', sm: '0.975rem', md: '1.0875rem'  }}>
+                                        {faq.answer}
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

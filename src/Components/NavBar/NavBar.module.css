@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 1.5rem 0;
+    padding: 20px 0;
 }
 
 .brandName {
@@ -47,7 +47,6 @@
         gap: 1.5rem;
     }
     .listItems a {
-
         padding: 0px !important;
     }
 }
@@ -58,7 +57,7 @@
     }
     .nav {
         justify-content: space-between;
-        padding: 0 15px;
+        padding: 10px 15px;
     }
 }
 
@@ -92,3 +91,5 @@
 .drawerButtonPrimary:hover {
     background-color: var(--dark-primary-color); /* Darker shade on hover */
 }
+
+
