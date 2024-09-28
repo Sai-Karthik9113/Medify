@@ -1,0 +1,16 @@
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: var(--primary-text-color);
+    font-family: var(--base-font-family);
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    width: '100%'
+}

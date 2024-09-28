@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Logo from "../Logo/Logo";
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, IconButton } from "@mui/material";
 import { FaUserMd, FaHospital, FaCapsules, FaProcedures, FaFileMedical, FaTools } from 'react-icons/fa';
 import { HiOutlineMenu } from "react-icons/hi";
 import { FaChevronCircleRight } from 'react-icons/fa';
 import { uniqueId } from "../../App";
+import Button from "../Button/Button";
 import styles from './NavBar.module.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -27,7 +28,6 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 }));
 
 const NavBar = () => {
-    const theme = useTheme();
     const isMobile = useMediaQuery('(max-width: 864px)');
     const [open, setOpen] = useState(false);
 
@@ -77,22 +77,10 @@ const NavBar = () => {
                                     </ListItem>
                                 ))}
                                 <Divider style={{ margin: '10px 0' }} />
-                                <ListItem>
-                                    <button
-                                        style={{
-                                            backgroundColor: theme.palette.primary.main,
-                                            border: 'none',
-                                            padding: '0.625rem 1.25rem',
-                                            borderRadius: '0.5rem',
-                                            fontSize: '14px',
-                                            fontWeight: '500',
-                                            color: 'white',
-                                            cursor: 'pointer',
-                                            width: '100%',
-                                        }}
-                                    >
+                                <ListItem style={{ width: '100%' }}>
+                                    <Button style={{ width: '100%' }}>
                                         My Bookings
-                                    </button>
+                                    </Button>
                                 </ListItem>
                             </List>
                         </div>
@@ -123,20 +111,9 @@ const NavBar = () => {
                             </li>
                         ))}
                         <li>
-                            <button
-                                style={{
-                                    backgroundColor: theme.palette.primary.main,
-                                    border: 'none',
-                                    padding: '0.625rem 1.25rem',
-                                    borderRadius: '0.5rem',
-                                    fontSize: '14px',
-                                    fontWeight: '500',
-                                    color: 'white',
-                                    cursor: 'pointer',
-                                }}
-                            >
+                            <Button>
                                 My Bookings
-                            </button>
+                            </Button>
                         </li>
                     </ul>
                 </nav>
