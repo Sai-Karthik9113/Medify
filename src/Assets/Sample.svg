@@ -1,11 +1,6 @@
-<svg width="1162" height="566" viewBox="0 0 1162 566" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="100%" height="100%" viewBox="0 0 604 503 " fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 
-<rect x="633.5" y="263.5" width="390" height="48" rx="7.5" fill="#FAFBFE"/>
-<rect x="633.5" y="263.5" width="390" height="48" rx="7.5" stroke="#F0F0F0"/>
-<mask id="path-4-inside-1_32_5" fill="white">
-<path d="M634 264H689.38V311H634V264Z"/>
-</mask>
 
 <mask id="mask0_32_5" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="245" y="38" width="297" height="478">
 <rect x="245" y="38" width="296.017" height="477.931" rx="40" fill="#D9D9D9"/>

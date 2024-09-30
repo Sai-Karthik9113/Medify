@@ -1,0 +1,94 @@
+.specialisationContainer {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0;
+    width: 100%; /* Set width for consistency */
+}
+
+.spCard {
+    background-color: #ffffff;
+    box-shadow: 0px 34px 44px 0px #D5DBE470;
+    border-radius: 10px;
+}
+
+.spCardIcon {
+    padding: 25px 0;
+}
+
+.spCardName {
+    flex-wrap: nowrap;
+    padding-bottom: 25px; /* Default padding for spCardName */
+}
+
+.spButton {
+    display: flex;
+    justify-content: center;
+}
+
+/* Media Queries */
+@media (min-width: 320px) {
+    .spCard {
+        width: 40%;
+    }
+    .spCardsContainer {
+        gap: 20px;
+    }
+}
+
+@media (min-width: 420px) {
+    .spCard {
+        width: 40%;
+    }
+}
+
+@media (min-width: 480px) {
+    .spCardsContainer {
+        gap: 50px;
+        width: 90%;
+    }
+}
+
+@media (min-width: 640px) {
+    .spCardsContainer {
+        gap: 20px;
+        width: 100%;
+    }
+    .spCard {
+        width: 20%;
+    }
+    .spCardIcon {
+        padding: 25px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .spCardsContainer {
+        gap: 30px;
+    }
+}
+
+@media (min-width: 960px) {
+    .spCard {
+        padding: 25px 0; /* Keep specific padding for larger screens */
+    }
+    .spCardIcon {
+        padding: 15px 0 25px 0; /* Same padding */
+    }
+}
+
+@media (min-width: 1200px) {
+    .spCardName {
+        padding-bottom: 25px; /* Increased padding for larger screens */
+    }
+}

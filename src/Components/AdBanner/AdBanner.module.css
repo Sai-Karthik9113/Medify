@@ -1,64 +1,75 @@
 .adContainer {
     display: flex;
-    align-items: center;
     justify-content: center;
     text-align: left;
     width: 100%;
 }
-.mobileImages {
-    position: relative;
-    width: 30%;
-}
-.downloadAppSection {
-    position: relative;
-    width: 30%;
+
+.mobileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.hardwareOne, .hardwareTwo {
+.device {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.downloadAppSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
     position: relative;
-    overflow: hidden;
+    margin-top: 30px;
 }
-.softwareOne, .softwareTwo {
-    position: absolute;
-    top: 10%;
-    width: fit-content;
-}
+
 .floatingArrow {
     position: absolute;
+    transition: top 0.2s, left 0.2s; /* Smooth transition for responsive changes */
 }
+
 .inputSection {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin-bottom: 55px;
+    margin-bottom: 3rem;
     gap: 1rem;
 }
+
 .inputContainer {
     display: flex;
     align-items: center;
-    border: none;
-    border-radius: 4px;
-    width: clamp(250px, 25vw, 590px) !important;
-    height: 47px;
-    background-color: rgb(255, 255, 255);
     border: 1px solid rgba(240, 240, 240, 1);
     border-radius: 8px;
+    width: clamp(300px, 25vw, 590px);
+    height: 47px;
+    background-color: #fff; /* Use shorthand for white */
 }
-  
+
 .prefix {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--lato-font-family);
     margin-right: 15px;
-    color: rgba(0, 0, 0, 1);
+    color: #000; /* Black */
     border-right: 1px solid rgba(240, 240, 240, 1);
     height: 100%;
     width: 17.5%;
     font-weight: 700;
     font-size: 14px;
 }
-  
+
 .phoneInput {
     border: none;
     outline: none;
@@ -75,24 +86,133 @@
 }
 
 .phoneInput::placeholder {
-    color: rgba(180, 180, 190, 1);;
+    color: rgba(180, 180, 190, 1);
 }
 
+/* Hide spinner for number inputs */
 input[type='text']::-webkit-inner-spin-button,
 input[type='text']::-webkit-outer-spin-button {
-    
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 960px) {
+    .adContainer {
+        flex-direction: column-reverse;
+        height: 80vh;
+    }
+    
+    .device {
+        width: 50%;
+    }
+    .downloadAppSection {
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .downloadButton {
+        justify-content: center;
+    }
+
+    .inputSection {
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
     .inputSection {
         flex-direction: column !important;
+        align-items: center;
     }
 }
 
-/* @media (max-width: 480px) {
-    .phoneInput {
-        padding: 8px 10px;
+
+@media (min-width: 320px)  {
+    .downloadContainer {
+        width: 75%;
     }
-} */
+    .adContainer {
+        height: 100vh;
+    }
+    .floatingArrow {
+        top: 7.5%;
+        left: 2.5%;
+    }
+}
+
+@media (min-width: 350px)  {
+    .adContainer {
+        height: 75vh;
+    }
+}
+
+@media (min-width: 380px)  {
+    .adContainer {
+        height: 70vh;
+    }
+    .floatingArrow {
+        top: 7.5%;
+        left: 10%;
+    }
+    .downloadContainer {
+        width: 70%;
+    }
+}
+
+@media (min-width: 420px)  {
+    .floatingArrow {
+        top: 15%;
+        left: 10%;
+    }
+    .downloadContainer {
+        width: 60%;
+    }
+}
+
+@media (min-width: 480px)  {
+    .downloadContainer {
+        width: 50%;
+    }
+    .floatingArrow {
+        top: 20%;
+        left: 20%;
+    }
+    .adContainer {
+        height: 75vh;
+    }
+}
+
+@media (min-width: 769px)  {
+    .floatingArrow {
+        top: 30%;
+        left: 20%;
+    }
+    .adContainer {
+        height: 80vh;
+    }
+}
+
+@media (min-width: 960px)  {
+    .adContainer {
+        height: 75vh;
+    }
+    .downloadContainer {
+        width: 80%;
+    }
+    .floatingArrow {
+        top: 25%;
+        left: -7.5%;
+    }
+}
+
+@media (min-width: 1200px)  {
+    .adContainer {
+        height: 75vh;
+    }
+    .floatingArrow {
+        top: 28.5%;
+        left: -7.5%;
+    }
+}

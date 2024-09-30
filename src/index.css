@@ -10,8 +10,9 @@
   --navy-blue: #1B3C74; /* background: rgba(27, 60, 116, 1); */
   --midnight-blue: rgba(16, 40, 81, 1);
   --grayish-blue: rgba(119, 130, 157, 1);
+  --cadet-blue: #ABB6C7;
 
-  --charcoal-gray: rgba(65, 65, 70, 1); /* background: #414146 */
+  --charcoal-gray: rgba(65, 65, 70, 1); /* background: #414146 */ 
 
   --base-font-family: 'Poppins', sans-serif;
   --lato-font-family: 'Lato', sans-serif;
