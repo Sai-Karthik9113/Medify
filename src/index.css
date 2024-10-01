@@ -13,7 +13,8 @@
   --cadet-blue: #ABB6C7;
   --dusty-blue: #77829D;
 
-  --charcoal-gray: rgba(65, 65, 70, 1); /* background: #414146 */ 
+  --charcoal-gray: rgba(65, 65, 70, 1); /* background: #414146 */
+  --slate-gray: #5C6169;
 
   --base-font-family: 'Poppins', sans-serif;
   --lato-font-family: 'Lato', sans-serif;
@@ -27,6 +28,7 @@
 }
 
 body {
+  overflow-x: hidden;
   text-align: center;
   font-family: var(--base-font-family);
 }

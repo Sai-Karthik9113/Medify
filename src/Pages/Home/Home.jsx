@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../../Components/NavBar/NavBar";
+import HeroSection from "../../Components/Hero/Hero";
 import Pay from "../../Components/PayCarousel/PayCarousel";
 import Specialisation from "../../Components/Specialisation/Specialisation";
 import BlogsAndNews from "../../Components/News/News";
@@ -13,7 +14,10 @@ const Home = () => {
     return (
         <div className={styles.container}>
             <NavBar />
-            <Pay />
+            <div>
+                <HeroSection />
+                <Pay />
+            </div>
             <Specialisation />
             <BlogsAndNews />
             <Customers />
