@@ -4,6 +4,7 @@ import HeroSection from "../../Components/Hero/Hero";
 import PayCarousel from "../../Components/Carousel/PayCarousel/PayCarousel";
 import Specialisation from "../../Components/Specialisation/Specialisation";
 import SpecialistCarousel from "../../Components/Carousel/SpecialistCarousel/SpecialistCarousel";
+import Services from "../../Components/HospitalServices/HospitalServices";
 import BlogsAndNews from "../../Components/News/News";
 import Customers from "../../Components/OurCustomers/OurCustomers";
 import FrequentlyAskedQuestions from "../../Components/FAQ/Questions";
@@ -24,6 +25,7 @@ const Home = () => {
             <div>
                 <SpecialistCarousel />
             </div>
+            <Services />
             <BlogsAndNews />
             <Customers />
             <FrequentlyAskedQuestions />

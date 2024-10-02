@@ -45,13 +45,13 @@ const Customers = () => {
     return (
         <div className={styles.newContainer}>
             <div className={styles.serviceDescription}>
-                <Typography variant="p" fontWeight='600' color="var(--aqua-blue)" marginBottom='5px' sx={{ fontSize: 'clamp(12px, 1vw, 17px)' }}>
+                <Typography variant="p" fontWeight='600' color="var(--aqua-blue)" marginBottom='5px' sx={{ fontSize: 'clamp(12px, 2vw, 17px)' }}>
                     CARING FOR THE HEALTH OF YOU AND YOUR FAMILY.
                 </Typography>
                 <Typography variant="h3" fontFamily='var(--base-font-family)' marginBottom='10px' fontWeight='600' color="var(--navy-blue)" sx={{ fontSize: 'clamp(24px, 4vw, 48px)' }}>
                     Our Families
                 </Typography>
-                <Typography variant="p" color="var(--dusty-blue)" sx={{ fontSize: 'clamp(12px, 1vw, 16px)' }}>
+                <Typography variant="p" color="var(--dusty-blue)" fontWeight='500' sx={{ fontSize: 'clamp(12px, 2vw, 17px)' }}>
                     We will work with you to develop individualised care plans, including management of chronic diseases. 
                     If we cannot assist, we can provide referrals or advice about the type of practitioner you require. 
                     We treat all enquiries sensitively and in the strictest confidence.
