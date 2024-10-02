@@ -1,9 +1,39 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import Button from "../Button/Button";
+// import doctorIcon from '../../Assets/HeroImage/doctor-icon.png';
+// import hospitals from '../../Assets/Specialisation/drug-store.png';
+// import hospitalBuilding from '../../Assets/HeroImage/hospital-building.png';
+// import capsule from '../../Assets/HeroImage/capsule.png';
+// import ambulance from '../../Assets/HeroImage/ambulance.png';
+// import { FaSearch } from 'react-icons/fa';
 import styles from './Hero.module.css';
 
+// const data = [
+//     {
+//         name: 'Doctors',
+//         icon: doctorIcon
+//     },
+//     {
+//         name: 'Labs',
+//         icon: hospitals
+//     },
+//     {
+//         name: 'Hospitals',
+//         icon: hospitalBuilding
+//     },
+//     {
+//         name: 'Medical Store',
+//         icon: capsule
+//     },
+//     {
+//         name: 'Ambulance',
+//         icon: ambulance
+//     }
+// ];
+
 const HeroSection = () => {
+
     return (
         <div className={styles.heroContainer}>
             <div className={styles.headLine}>
@@ -49,6 +79,27 @@ const HeroSection = () => {
             <div className={styles.doctorsImage}>
                 <img src={require('../../Assets/HeroImage/doctors.png')} alt="Doctors" style={{ width:'100%' }} />
             </div>
+            {/* <div className={styles.floatingSearchBox}>
+                <div className={styles.searchContainer}>
+                    <form>
+                        <input type="text" placeholder={<FaSearch /> Search} />
+                        <input type="text" placeholder="City" />
+                    </form>
+                </div>
+                <div>You may be looking for</div>
+                <div className={styles.cardsContainer}>
+                    {
+                        data.map((item, index) => (
+                            <div className={styles.cardContainer} key={index}>
+                                <img src={item.icon} alt={item.name} />
+                                <Typography variant='p'>
+                                    {item.name}
+                                </Typography>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div> */}
         </div>
     )
 };
