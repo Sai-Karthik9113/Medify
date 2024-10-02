@@ -19,11 +19,11 @@ const StyledListItemButton = styled(ListItemButton)(({ theme }) => ({
 
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
     '& .MuiDrawer-paper': {
-        backgroundColor: 'rgba(255, 255, 255, 0.7)', // Slightly transparent background
-        borderLeft: '1px solid rgba(255, 255, 255, 0.7)',
+        background: 'var(--primary-color)',
+        borderRight: 'var(--primary-color)',
         width: '60%',
         padding: theme.spacing(2),
-        backdropFilter: 'blur(10px)', // Adds a blur effect
+        backdropFilter: 'blur(10px)',
     },
 }));
 
@@ -31,12 +31,8 @@ const NavBar = () => {
     const isMobile = useMediaQuery('(max-width: 864px)');
     const [open, setOpen] = useState(false);
 
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-
-    const handleDrawerClose = () => {
-        setOpen(false);
+    const toggleDrawer = () => {
+        setOpen(prev => !prev);
     };
 
     const list = [
@@ -55,16 +51,19 @@ const NavBar = () => {
             </div>
             {isMobile ? (
                 <>
-                    <IconButton onClick={handleDrawerOpen} color="primary">
+                    <IconButton onClick={toggleDrawer} color="primary">
                         <HiOutlineMenu size={24} />
                     </IconButton>
                     <StyledDrawer
                         anchor="right"
                         open={open}
-                        onClose={handleDrawerClose}
+                        onClose={toggleDrawer}
+                        BackdropProps={{
+                            onClick: toggleDrawer,
+                        }}
                     >
                         <div>
-                            <IconButton onClick={handleDrawerClose} style={{ display: 'flex', paddingLeft: '10px' }}>
+                            <IconButton onClick={toggleDrawer} style={{ display: 'flex', paddingLeft: '10px' }}>
                                 <FaChevronCircleRight size={24} color='var(--aqua-blue)' />
                             </IconButton>
                             <List>

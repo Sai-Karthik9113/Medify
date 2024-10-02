@@ -47,7 +47,6 @@ const Controls = ({ data }) => {
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           initialSlide={initialSlide}
           centeredSlides={centeredSlides}
-          allowTouchMove={false}
         >
           <Controls data={dataCards} />
           {dataCards.map((card, index) => (

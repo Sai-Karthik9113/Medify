@@ -12,6 +12,7 @@ export function uniqueId() {
 }
 
 function App() {
+  
   return (
     <div className="App">
       <div className='Banner'>
