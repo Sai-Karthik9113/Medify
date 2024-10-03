@@ -5,18 +5,22 @@
   --aque-breeze-color: linear-gradient(144.2deg, #E1F3FF 0%, #2AA7FF 100%);
 
 
-  --primary-text-color: #2AA8FF; /* background: rgba(42, 168, 255, 1) */
+  --primary-text-color: #2AA8FF;                                    /* background: rgba(42, 168, 255, 1) */
   --secondary-text-color: rgba(255, 255, 255, 1);
 
-  --aqua-blue: #2AA7FF; /* background: rgba(42, 167, 255, 1); */
-  --navy-blue: #1B3C74; /* background: rgba(27, 60, 116, 1); */
-  --midnight-blue: rgba(16, 40, 81, 1);
-  --grayish-blue: rgba(119, 130, 157, 1);
+  --aqua-blue: #2AA7FF;                                             /* background: rgba(42, 167, 255, 1); */
+  --faint-aqua-blue: rgba(42, 167, 255, 0.08);
+  --navy-blue: #1B3C74;                                             /* background: rgba(27, 60, 116, 1); */
+  --midnight-blue: #102851;                                         /*background: rgba(119, 130, 157, 1); */
+  --grayish-blue: ;
   --cadet-blue: #ABB6C7;
   --dusty-blue: #77829D;
 
-  --charcoal-gray: rgba(65, 65, 70, 1); /* background: #414146 */
+  --ghost-white: #FAFBFE;
+
+  --charcoal-gray: #414146;                                         /* background: rgba(65, 65, 70, 1) */
   --slate-gray: #5C6169;
+  --cool-gray: #9CA3AF;
 
   --base-font-family: 'Poppins', sans-serif;
   --lato-font-family: 'Lato', sans-serif;

@@ -3,6 +3,7 @@
 @media (min-width: 320px) {
     .heroContainer {
         display: flex;
+        position: relative;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -19,6 +20,107 @@
         display: flex;
         width: clamp(250px, 5vh, 350px);
         padding: 50px 0;
+    }
+    .floatingSearchBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 85%;
+        border-radius: 15px;
+        background: var(--secondary-text-color);
+        border: 1px solid #F0F0F0;
+        box-shadow: 6px 6px 35px 0px #1028511C;
+        z-index: 1;
+        margin: 0 15px;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    .searchContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .searchSection {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .cardsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 10px;
+        font-size: 10px;
+        flex-wrap: wrap;
+    }
+    .cardSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--cadet-blue);
+        background-color: var(--ghost-white);
+        padding: 15px 0;
+        gap: 5px;
+        width: 80px;
+        height: auto;
+    }
+    .cardsContainer img {
+        width: auto;
+        height: 20px;
+    }
+    .centeredTextContainer {
+        font-size: clamp(16px, 2vw, 20px);
+        color: var(--midnight-blue);
+    }
+}
+
+@media ((min-width: 420px)) {
+    .floatingSearchBox {
+        margin: 0 30px;
+    }
+    .cardsContainer {
+        gap: 7.5px;
+    }
+}
+
+@media ((min-width: 480px)) {
+    .cardsContainer {
+        gap: 10px;
+    }
+    .cardSection {
+        width: 90px;
+        height: auto;
+    }
+}
+
+@media ((min-width: 600px)) {
+    .floatingSearchBox {
+        margin: 0 30px;
+        padding: 20px 10px;
+    }
+    .cardsContainer img {
+        gap: 15px;
+        width: auto;
+        height: 30px;
+    }
+    .cardSection {
+        width: 110px;
+        height: auto;
+    }
+    .searchContainer {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .searchSection {
+        flex-direction: row;
+        gap: 30px;
     }
 }
 
@@ -39,6 +141,25 @@
         width: 350px !important;
         padding: 0px 0 100px;
     }
+    .floatingSearchBox {
+        top: 65%;
+    }
+    .searchContainer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .searchSection {
+        gap: 30px;
+    }
+    .cardsContainer img {
+        width: auto;
+        height: 30px;
+    }
+    .cardSection {
+        gap: 10px;
+        width: 125px;
+        height: auto;
+    }
 }
 
 
@@ -49,10 +170,40 @@
     .headLine {
         width: 35%;
     }
+    .searchContainer {
+        justify-content: space-around;
+    }
+    .searchSection {
+        gap: 30px;
+    }
+    .cardsContainer {
+        gap: 20px;
+    }
+    .cardsContainer img {
+        width: auto;
+        height: 40px;
+    }
+    .cardSection {
+        gap: 15px;
+        width: 180px;
+        height: auto;
+    }
+
 }
 
 @media (min-width: 1300px) {
     .headLine {
         width: 30%;
+    }
+    .searchSection {
+        gap: 50px;
+    }
+    .cardsContainer img {
+        width: auto;
+        height: 60px;
+    }
+    .cardSection {
+        width: 200px;
+        height: auto;
     }
 }

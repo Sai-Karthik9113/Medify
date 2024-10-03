@@ -11,7 +11,7 @@
 
 @media (min-width: 320px) {
     .wrapper {
-        padding: 150px 25px 20px;
+        padding: 550px 25px 20px;
     }
     .spWrapper {
         background: var(--secondary-text-color);
@@ -25,9 +25,16 @@
         gap: 5px;
     }
 }
+
+@media (min-width: 380px) {
+    .wrapper {
+        padding: 450px 25px 20px;
+    }
+}
+
 @media (min-width: 768px) {
     .wrapper {
-        padding: 150px 50px 25px;
+        padding: 175px 50px 25px;
     }
     .spWrapper {
         gap: 20px;
@@ -36,7 +43,7 @@
 
 @media (min-width: 1024px) {
     .wrapper {
-        padding: 150px 75px 25px;
+        padding: 200px 75px 25px;
     }
     .imageContainer img {
         height: 340px !important;
