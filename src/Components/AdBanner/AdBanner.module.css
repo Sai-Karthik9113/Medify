@@ -96,49 +96,21 @@ input[type='text']::-webkit-outer-spin-button {
     margin: 0;
 }
 
-/* Media Queries */
-@media (max-width: 960px) {
-    .adContainer {
-        flex-direction: column-reverse;
-        height: 80vh;
-    }
-    
-    .device {
-        width: 50%;
-    }
-    .downloadAppSection {
-        align-items: center;
-        text-align: center;
-        padding: 0;
-    }
-    .downloadButton {
-        justify-content: center;
-    }
-
-    .inputSection {
-        margin-bottom: 2rem;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .inputSection {
-        flex-direction: column !important;
-        align-items: center;
-    }
-}
-
-
 @media (min-width: 320px)  {
     .downloadContainer {
         width: 75%;
     }
     .adContainer {
+        flex-direction: column-reverse;
         height: 100vh;
     }
     .floatingArrow {
         top: 7.5%;
         left: 2.5%;
+    }
+    .inputSection {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -184,28 +156,63 @@ input[type='text']::-webkit-outer-spin-button {
     }
 }
 
+@media (min-width: 500px)  {
+    .adContainer {
+        height: 85vh;
+    }
+}
+
 @media (min-width: 769px)  {
     .floatingArrow {
         top: 30%;
         left: 20%;
     }
     .adContainer {
-        height: 80vh;
+        height: 92.5vh;
+    }
+
+    .inputSection {
+        flex-direction: row;
+        align-items: center;
     }
 }
 
 @media (min-width: 960px)  {
     .adContainer {
-        height: 75vh;
+        flex-direction: row;
+        height: 80vh;
     }
     .downloadContainer {
         width: 80%;
     }
     .floatingArrow {
-        top: 25%;
+        top: 30%;
         left: -7.5%;
     }
 }
+
+@media (max-width: 960px) {
+
+    
+    .device {
+        width: 50%;
+    }
+    .downloadAppSection {
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .downloadButton {
+        justify-content: center;
+    }
+
+    .inputSection {
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+}
+
+
 
 @media (min-width: 1200px)  {
     .adContainer {

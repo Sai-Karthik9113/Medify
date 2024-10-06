@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './Pages/Home/Home';
+import MedicalCenters from './Pages/MedicalCenters/MedicalCenters';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
       </div>
       <Routes>
         <Route exact path='/' element={<Home />} />
+        <Route path='/medical-centers' element={<MedicalCenters />} />
       </Routes>
     </div>
   );

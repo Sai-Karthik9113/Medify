@@ -9,6 +9,7 @@ import { uniqueId } from "../../App";
 import Button from "../Button/Button";
 import styles from './NavBar.module.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useNavigate } from "react-router-dom";
 
 const StyledListItemButton = styled(ListItemButton)(({ theme }) => ({
     padding: '10px 0px',
@@ -30,6 +31,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 const NavBar = () => {
     const isMobile = useMediaQuery('(max-width: 864px)');
     const [open, setOpen] = useState(false);
+    const navigate = useNavigate();
 
     const toggleDrawer = () => {
         setOpen(prev => !prev);
@@ -44,9 +46,13 @@ const NavBar = () => {
         { name: 'Facilities', icon: <FaTools /> },
     ];
 
+    const navigateToHome = () => {
+        navigate('/');
+    } 
+
     return (
         <div className={styles.nav}>
-            <div className={styles.brandName}>
+            <div className={styles.brandName} onClick={navigateToHome}>
                 <Logo />
             </div>
             {isMobile ? (

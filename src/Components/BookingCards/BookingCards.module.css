@@ -1,0 +1,229 @@
+.cardContainer, .accordionItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContainer {
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.accordionItem {
+    padding: 20px;
+    background: var(--secondary-text-color);
+    border-radius: 15px;
+    width: 100%;
+}
+
+.accordionOverlay {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+.detailsContainer {
+    width: 60%;
+}
+
+.buttonSection {
+    width: 40%;
+}
+
+.imageSection {
+    display: flex;
+    position: relative;
+    background: var(--sky-blue);
+    width: fit-content;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+    width: 100%;
+}
+
+.addressContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.consulationFee {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.accordionContent {
+    border-top: 1px solid #F0F0F5;
+    width: 100%;
+    position: relative;
+    height: fit-content;
+    padding: 0 10px;
+    margin: 50px 0;
+}
+.slotsAvailable {
+    display: flex;
+    gap: 30px;
+    text-align: left;
+    padding: 20px 0;
+}
+.timeSlotsAvailable {
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    gap: 10px;
+    color: var(--aqua-blue);
+    flex-wrap: wrap;
+}
+
+.slotsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.ratingSection {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    width: 50px;
+    border-top: 2px dashed #E8E8F0;
+    
+}
+
+.ratingContainer {
+    color: var(--secondary-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--apple-green);
+    width: 45px;
+    height: auto;
+    gap: 0.5rem;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+
+@media (min-width: 320px) {
+    .accordionOverlay {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+    .detailsContainer {
+        align-items: center;
+        text-align: center;
+    }
+    .address, .consulationFee {
+        align-items: center;
+    }
+    .hospitalImage {
+        width: 40px;
+        height: auto;
+    }
+    .consulationFee {
+        flex-direction: column;
+    }
+    .buttonSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .iconSection {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .slotsContainer {
+        padding-left: 0px;
+        gap: 20px;
+    }
+
+    .period {
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 480px) {
+    .hospitalImage {
+        width: 50px;
+        height: auto;
+    }
+    .period {
+        width: 30%;
+    }
+}
+
+@media (min-width: 768px) {
+    .hospitalImage {
+        width: 60px;
+        height: auto;
+    }
+    .period {
+        width: 20%;
+    }
+    .slotsContainer {
+        padding-left: 25px;
+    }
+}
+
+@media (min-width: 960px) {
+    .accordionOverlay {
+        flex-direction: row;
+    }
+    .detailsContainer {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .address, .consulationFee {
+        align-items: flex-start;
+    }
+    .hospitalImage {
+        width: 70px;
+        height: auto;
+    }
+    .period {
+        width: 10%;
+    }
+    .slotsContainer {
+        padding-left: 50px;
+    }
+    .buttonSection {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .accordionOverlay {
+        gap: 50px;
+    }
+    .hospitalImage {
+        width: 80px;
+        height: auto;
+    }
+    .consulationFee {
+        flex-direction: row;
+    }
+}

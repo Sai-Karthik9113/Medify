@@ -30,7 +30,7 @@ const Services = () => {
                                     <div style={{ color: 'var(--navy-blue)', fontFamily: 'var(--inter-font-family)', fontWeight: '700', fontSize: 'clamp(12px, 2vw, 16px)' }}>
                                         <Call /> Free Consultation
                                     </div>
-                                    <div style={{ color: 'var(--dusty-blue)', fontFamily: 'var(--inter-font-family)', fontWeight: '500', fontSize: 'clamp(11px, 2vw, 15px)' }}>
+                                    <div style={{ color: 'var(--grayish-blue)', fontFamily: 'var(--inter-font-family)', fontWeight: '500', fontSize: 'clamp(11px, 2vw, 15px)' }}>
                                         Consultation with the best
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@ const Services = () => {
                 <Typography variant="h3" fontFamily='var(--base-font-family)' fontWeight='600' color="var(--navy-blue)" sx={{ fontSize: 'clamp(24px, 4vw, 48px)' }}>
                     Patient <span color="var(--aqua-blue)">Caring</span>
                 </Typography>
-                <Typography variant="p" fontFamily='var(--inter-font-family)' color="var(--dusty-blue)" fontWeight='500' margin='25px 0' sx={{ fontSize: 'clamp(12px, 2vw, 17px)' }}>
+                <Typography variant="p" fontFamily='var(--inter-font-family)' color="var(--grayish-blue)" fontWeight='500' margin='25px 0' sx={{ fontSize: 'clamp(12px, 2vw, 17px)' }}>
                     Our goal is to deliver quality of care in a courteous, respectful, and compassionate manner. 
                     We hope you will allow us to care for you and strive to be the first and best choice for healthcare.
                 </Typography>
