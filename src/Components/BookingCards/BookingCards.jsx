@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as HospitalBuilding } from '../../Assets/MedicalCenterImages/hospital.svg';
 import { ReactComponent as BlueCheck } from '../../Assets/MedicalCenterImages/blue-check.svg';
 import { ReactComponent as ThumbsUp } from '../../Assets/MedicalCenterImages/Vector.svg';
@@ -12,18 +12,24 @@ import CarouselLeftNavigation from "./CarouselLeft/CarouselLeft";
 import CarouselRightNavigation from "./CarouselRight/CarouselRight";
 import styles from './BookingCards.module.css';
 
-const slots = [
-    {
-        Morning: ['10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM'],
-        Afternoon: ['12:00 PM', '12:30 PM', '01:00 PM', '01:30 PM', '02:00 PM'],
-        Evening: ['04:00 PM', '04:30 PM', '05:00 PM', '05:30 PM', '06:30 PM', '07:00 PM']
-    }
-];
-
 const Cards = ({ cardData, modalType }) => {
     const [openIndex, setOpenIndex] = useState(null);
     const [selectedDate, setSelectedDate] = useState(0);
-    const [selectedSlot, setSelectedSlot] = useState({}); // Initialize selectedSlot state
+    const [selectedSlot, setSelectedSlot] = useState({});
+    const [bookings, setBookings] = useState([]);
+
+    const [slots, setSlots] = useState(JSON.parse(localStorage.getItem('slots')) || [
+        {
+            Morning: ['10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM'],
+            Afternoon: ['12:00 PM', '12:30 PM', '01:00 PM', '01:30 PM', '02:00 PM'],
+            Evening: ['04:00 PM', '04:30 PM', '05:00 PM', '05:30 PM', '06:30 PM', '07:00 PM']
+        }
+    ]);
+
+    // Add this useEffect for syncing the state with localStorage
+    useEffect(() => {
+        localStorage.setItem('slots', JSON.stringify(slots));
+    }, [slots]);
 
     const handleSlotSelection = (timeSlot, period) => {
         // Create or get the current date's selected slots
@@ -72,8 +78,27 @@ const Cards = ({ cardData, modalType }) => {
     
             saveBookingDetails(bookingDetails);
     
-            // Remove the booked slot from the available slots
-            slots[0][currentSlot.period] = slots[0][currentSlot.period].filter(time => time !== currentSlot.time);
+            // Remove the booked slot from the available slots and persist to local storage
+            setSlots((prevSlots) => {
+                // Ensure that prevSlots is always defined and has the expected structure
+                if (!prevSlots || !Array.isArray(prevSlots) || prevSlots.length === 0) {
+                    return prevSlots; // Return as it is if structure is incorrect
+                }
+
+                // Create a copy of the slots
+                const updatedSlots = [...prevSlots];
+
+                // Update the correct period by filtering out the booked slot
+                updatedSlots[0] = {
+                    ...updatedSlots[0],
+                    [currentSlot.period]: updatedSlots[0][currentSlot.period].filter(time => time !== currentSlot.time),
+                };
+
+                // Persist updated slots to local storage
+                localStorage.setItem('availableSlots', JSON.stringify(updatedSlots));
+
+                return updatedSlots;
+            });
 
             setSelectedSlot({});
             setSelectedDate(0);
@@ -113,6 +138,13 @@ const Cards = ({ cardData, modalType }) => {
     const handleClick = (index) => {
         setSelectedDate(index);
     };
+
+    useEffect(() => {
+        setBookings(JSON.parse(localStorage.getItem('bookingDetails')) || []);
+    }, []);
+
+    console.log(bookings);
+    
     
     const renderContent = () => {
         switch (modalType) {
