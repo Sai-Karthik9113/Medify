@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Pages/Home/Home';
 import MedicalCenters from './Pages/MedicalCenters/MedicalCenters';
+import MyBookings from './Pages/MyBookings/MyBookings';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/medical-centers' element={<MedicalCenters />} />
+        <Route path='/bookings' element={<MyBookings />} />
       </Routes>
     </div>
   );

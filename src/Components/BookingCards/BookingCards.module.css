@@ -31,6 +31,13 @@
     width: 40%;
 }
 
+.timeAndDateSlots {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
 .imageSection {
     display: flex;
     position: relative;
@@ -88,10 +95,8 @@
 
 .slotsContainer {
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-    padding-top: 50px;
 }
 
 .ratingSection {
@@ -121,6 +126,60 @@
     width: 80%;
 }
 
+.floatingAdMyBoookings img {
+    width: clamp(50px, 100%, 325px);
+    height: clamp(100px, auto, 268px);
+}
+
+.bookingsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+}
+
+.bookingDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+
+.slotsContainer {
+    display: flex;
+    width: 100%;
+}
+
+.timeContainer, .dateContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    font-family: var(--lato-font-family);
+    font-size: 14px;
+}
+.timeContainer {
+    color: var(--aqua-blue);
+    border: 1px solid var(--aqua-blue);
+    width: 5.5rem;
+    height: 2rem;
+    font-weight: 400;
+}
+.dateContainer {
+    color: var(--forest-green);
+    border: 1px solid var(--apple-green);
+    font-weight: 700;
+    width: 7rem;
+    height: 2rem;
+}
+
+.pageNameContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end; 
+    padding: 20px 50px;
+}
 
 @media (min-width: 320px) {
     .accordionOverlay {
@@ -156,6 +215,7 @@
         justify-content: center;
     }
     .slotsContainer {
+        display: flex;
         padding-left: 0px;
         gap: 20px;
     }
@@ -164,6 +224,41 @@
         width: 50%;
     }
 
+    .bookingsContainer {
+        flex-direction: column;
+        height: 100%;
+    }
+    .floatingAdMyBoookings {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pageName {
+        height: 35vh;
+    }
+    .pageNameContainer {
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 350px) {
+    .pageName {
+        height: 27.5vh;
+    }
+}
+
+@media (min-width: 380px) {
+    .pageName {
+        height: 26vh;
+    }
+}
+
+@media (min-width: 420px) {
+    .pageName {
+        height: 22.5vh;
+    }
 }
 
 @media (min-width: 480px) {
@@ -173,6 +268,22 @@
     }
     .period {
         width: 30%;
+    }
+    .pageName {
+        height: 24vh;
+    }
+}
+
+@media (min-width: 600px) {
+    .bookingsContainer {
+        flex-direction: row;
+    }
+    .floatingAdMyBoookings {
+        height: 100%;
+        width: 30%;
+    }
+    .pageNameContainer {
+        justify-content: flex-start;
     }
 }
 
@@ -184,9 +295,10 @@
     .period {
         width: 20%;
     }
-    .slotsContainer {
-        padding-left: 25px;
+    .pageName {
+        height: 20vh;
     }
+    
 }
 
 @media (min-width: 960px) {
@@ -207,11 +319,14 @@
     .period {
         width: 10%;
     }
-    .slotsContainer {
-        padding-left: 50px;
-    }
     .buttonSection {
         width: 70%;
+    }
+    .floatingAdMyBoookings {
+        width: 30%;
+    }
+    .pageName {
+        height: 30vh;
     }
 }
 

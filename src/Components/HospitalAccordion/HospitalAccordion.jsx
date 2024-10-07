@@ -67,7 +67,7 @@ const HospitalCardWithAccordion = () => {
                     </Typography>
                 </div>
                 <div className={styles.accordionCardContainer}>
-                    <Cards cardData={hospitalData} modalType='Hospitals Available' />
+                    <Cards cardData={hospitalData} />
                 </div>
             </div>
             <div className={styles.floatingAd}>

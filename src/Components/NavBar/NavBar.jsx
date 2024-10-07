@@ -48,7 +48,11 @@ const NavBar = () => {
 
     const navigateToHome = () => {
         navigate('/');
-    } 
+    }
+
+    const navigateToMyBookings = () => {
+        navigate('/bookings');
+    }
 
     return (
         <div className={styles.nav}>
@@ -83,7 +87,7 @@ const NavBar = () => {
                                 ))}
                                 <Divider style={{ margin: '10px 0' }} />
                                 <ListItem style={{ width: '100%' }}>
-                                    <Button style={{ width: '100%' }}>
+                                    <Button style={{ width: '100%' }} onClick={navigateToMyBookings}>
                                         My Bookings
                                     </Button>
                                 </ListItem>
@@ -116,7 +120,7 @@ const NavBar = () => {
                             </li>
                         ))}
                         <li>
-                            <Button>
+                            <Button onClick={navigateToMyBookings}>
                                 My Bookings
                             </Button>
                         </li>

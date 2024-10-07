@@ -54,9 +54,10 @@
 }
 
 @media (min-width: 700px) {
+
     .cardSection {
         flex-direction: row;
-        align-items: flex-start;
+        align-items: flex-start;    
         padding: 50px 20px;
     }
     .floatingAd {

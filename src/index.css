@@ -3,6 +3,7 @@
   --secondary-color: linear-gradient(81deg, #EFF5FE 9.01%, rgba(241, 247, 255, 0.47) 89.11%);
 
   --aque-breeze-color: linear-gradient(144.2deg, #E1F3FF 0%, #2AA7FF 100%);
+  --ocean-wave-gradient: linear-gradient(91.75deg, #2AA7FF 1.4%, #0C8CE6 100.57%);
 
 
   --primary-text-color: #2AA8FF;
@@ -28,11 +29,13 @@
   --lime-green: #02A401;
   --jade-green: #01A400;
   --apple-green: #00A500;
+  --forest-green: #007100;
 
 
   --base-font-family: 'Poppins', sans-serif;
   --lato-font-family: 'Lato', sans-serif;
   --inter-font-family: 'Inter', sans-serif;
+  --ubuntu-font-family: 'Ubuntu', sans-serif;
 }
 
 
