@@ -10,12 +10,12 @@ const SearchBox = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Set isVisible to true to trigger the animation after the component mounts
+
         setIsVisible(true);
     }, []);
 
     return (
-        <div style={{ position: 'absolute', top: '100%' }} className={isVisible ? styles.slideIn : styles.slideOut}>
+        <div style={{ position: 'absolute', zIndex: '1001' }} className={isVisible ? styles.slideIn : styles.slideOut}>
             {location.pathname !== '/bookings' ? (
                 <div className={styles.searchBoxContainer}>
                     <Box sx={{ display: 'flex', alignItems: 'center', width: { xs: '225px', md: '250px', lg: '350px' } }}>

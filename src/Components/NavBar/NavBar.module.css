@@ -39,12 +39,12 @@
     font-weight: 400;
     padding: 10px 15px;
     border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .listItems a:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
-    color: var(--primary-color); /* Change text color on hover */
+    background-color: rgba(0, 0, 0, 0.05); 
+    color: var(--primary-color); 
 }
 
 @media (max-width: 1024px) {
@@ -66,20 +66,20 @@
     }
 }
 
-/* Drawer specific styles */
+
 .drawerButton {
-    color: var(--primary-color); /* Ensure the menu button is prominent */
+    color: var(--primary-color);
 }
 
 .drawerButton:hover {
-    color: var(--aqua-blue); /* Change color on hover */
+    color: var(--aqua-blue);
 }
 
 .drawerContent {
-    padding: 16px; /* Consistent padding inside the drawer */
+    padding: 16px;
 }
 
-/* Style for the button in the drawer */
+
 .drawerButtonPrimary {
     background-color: var(--primary-color);
     border: none;
@@ -90,11 +90,11 @@
     color: white;
     cursor: pointer;
     width: 100%;
-    transition: background-color 0.3s; /* Smooth background transition */
+    transition: background-color 0.3s; 
 }
 
 .drawerButtonPrimary:hover {
-    background-color: var(--dark-primary-color); /* Darker shade on hover */
+    background-color: var(--dark-primary-color);
 }
 
 
