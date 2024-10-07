@@ -10,6 +10,7 @@ import Button from "../Button/Button";
 import styles from './NavBar.module.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useNavigate } from "react-router-dom";
+import SearchBox from "./SearchBox";
 
 const StyledListItemButton = styled(ListItemButton)(({ theme }) => ({
     padding: '10px 0px',
@@ -32,13 +33,20 @@ const NavBar = () => {
     const isMobile = useMediaQuery('(max-width: 864px)');
     const [open, setOpen] = useState(false);
     const navigate = useNavigate();
+    const [searchBox, setSearchBox] = useState(false); 
+    const [isVisible, setIsVisible] = useState(false);
 
     const toggleDrawer = () => {
         setOpen(prev => !prev);
     };
 
+    const handleFindDoctorsClick = () => {
+        setSearchBox((prev) => !prev);
+        setIsVisible(searchBox);
+    };
+
     const list = [
-        { name: 'Find Doctors', icon: <FaUserMd /> },
+        { name: 'Find Doctors', icon: <FaUserMd />, onClick: handleFindDoctorsClick },
         { name: 'Hospitals', icon: <FaHospital /> },
         { name: 'Medicines', icon: <FaCapsules /> },
         { name: 'Surgeries', icon: <FaProcedures /> },
@@ -79,8 +87,11 @@ const NavBar = () => {
                             <List>
                                 {list.map((val) => (
                                     <ListItem key={uniqueId()}>
-                                        <StyledListItemButton  sx={{  color: "var(--midnight-blue) !important" }} component="a" href={`#${val.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                                            <ListItemIcon sx={{  color: "var(--midnight-blue) !important" }}>{val.icon}</ListItemIcon>
+                                        <StyledListItemButton 
+                                            sx={{ color: "var(--midnight-blue) !important" }} 
+                                            onClick={val.onClick} // Attach onClick here
+                                        >
+                                            <ListItemIcon sx={{ color: "var(--midnight-blue) !important" }}>{val.icon}</ListItemIcon>
                                             {val.name}
                                         </StyledListItemButton>
                                     </ListItem>
@@ -99,7 +110,7 @@ const NavBar = () => {
                 <nav>
                     <ul className={styles.listItems}>
                         {list.map((val) => (
-                            <li key={uniqueId()}>
+                            <li key={uniqueId()} onClick={val.onClick}>
                                 <a
                                     href={`#${val.name.toLowerCase().replace(/\s+/g, '-')}`}
                                     className={styles.navLink}
@@ -127,6 +138,7 @@ const NavBar = () => {
                     </ul>
                 </nav>
             )}
+            {searchBox && <SearchBox isVisible={isVisible} />}
         </div>
     );
 };

@@ -1,0 +1,111 @@
+.searchBoxContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px;
+    background-color: var(--secondary-text-color);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 6px 6px 35px 0px #1028511C;
+}
+
+.input {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding for the input */
+    border: 1px solid var(--light-gray); /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size for the input */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.input:focus {
+    border-color: var(--aqua-blue); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.searchButton {
+    background-color: var(--aqua-blue); /* Button background color */
+    color: var(--white); /* Button text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for the button */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.searchButton:hover {
+    background-color: var(--dark-aqua-blue); /* Darker shade on hover */
+}
+
+.searchBox {
+    display: flex; /* Flexbox for the search box layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 10px; /* Padding for the search box */
+    border: 1px solid var(--light-gray); /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.searchBox input {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding for the input */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    font-size: 16px; /* Font size for the input */
+}
+
+.searchBox button {
+    background-color: var(--aqua-blue); /* Button background color */
+    color: var(--white); /* Button text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for the button */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.searchBox button:hover {
+    background-color: var(--dark-aqua-blue); /* Darker shade on hover */
+}
+
+.searchBoxContainer .input,
+.searchBox .input {
+    font-family: var(--base-font-family);
+    background: var(--ghost-white);
+    border: 1px solid #F0F0F0; /* If you want a border */
+    padding: 10px; /* Padding for the input */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size for the input */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.searchBox .input:focus {
+    border-color: #E0E0E0; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.searchBox .input::placeholder {
+    color: var(--cadet-blue); /* Placeholder color */
+}
+
+.slideIn {
+    animation: slideIn 0.5s forwards; /* Slide in effect */
+}
+
+.slideOut {
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

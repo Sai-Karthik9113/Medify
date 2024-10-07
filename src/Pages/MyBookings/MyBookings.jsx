@@ -26,7 +26,7 @@ const MyBookings = () => {
                     </Typography>
                 </div>
             </div>
-            {!savedBookings ? (
+            {savedBookings.length !== 0 ? (
                 <div className={styles.bookingsContainer}>
                     <div className={styles.bookingDetails}>
                         {savedBookings.map((item) => (
@@ -83,7 +83,7 @@ const MyBookings = () => {
                                         </div>
                                     </div>
                                     <div className={styles.timeAndDateSlots}>
-                                        <div className={styles.slotsContainer}>
+                                        <div className={styles.timeAndDateSlotsContainer}>
                                             <div className={styles.timeContainer}>
                                                 {item.time}
                                             </div>

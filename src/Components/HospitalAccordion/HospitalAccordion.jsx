@@ -16,8 +16,6 @@ const HospitalCardWithAccordion = () => {
         currentCity: queryParams.get('city'),
         currentState: queryParams.get('state')
     }
-
-    console.log(hospitalLocation.currentCity, hospitalLocation.currentState);
     
     useEffect(() => {
         const fetchHospitalData = async() => {
@@ -49,7 +47,7 @@ const HospitalCardWithAccordion = () => {
                             fontSize: 'clamp(16px, 2vw, 24px)' 
                         }}
                     >
-                        15 medical centers available in Alaska
+                        {hospitalData.length} medical centers available in Alaska
                     </Typography>
                     <Typography 
                         variant='p' 

@@ -120,6 +120,9 @@ const FloatingSearchBox = ({ containerData }) => {
                         }}
                         sx={{
                             background: 'var(--ghost-white)',
+                            '& *': {
+                                fontFamily: 'var(--base-font-family)',
+                            },
                             '& .MuiOutlinedInput-notchedOutline': {
                                 borderColor: '#F0F0F0',
                             },
@@ -129,15 +132,20 @@ const FloatingSearchBox = ({ containerData }) => {
                             '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
                                 borderColor: '#E0E0E0',
                             },
-                            '& .MuiInputBase-input::placeholder': {
+                            '& .Mui-disabled .MuiInputBase-input::placeholder': {
                                 color: 'var(--cadet-blue)',
+                                fontFamily: 'var(--base-font-family)',
                             },
                             '& .MuiSelect-icon': {
                                 display: 'none',
                             },
                             '&.MuiList-root-MuiMenu-list': {
                                 paddingTop: '0px !important'
-                            }
+                            },
+                            '&.Mui-disabled .MuiInputBase-input': {
+                                color: 'var(--cadet-blue)', // Set the font color for the disabled input
+                                fontFamily: 'var(--base-font-family)', // Ensure the font family is applied
+                            },
                         }}
                         required
                     >

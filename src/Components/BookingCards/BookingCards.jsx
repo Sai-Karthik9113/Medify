@@ -10,7 +10,8 @@ import { Navigation } from "swiper/modules";
 import 'swiper/css'
 import { uniqueId } from "../../App";
 import CarouselLeftNavigation from "./CarouselLeft/CarouselLeft";
-import CarouselRightNavigation from "./CarouselRight/CarouselRight";;
+import CarouselRightNavigation from "./CarouselRight/CarouselRight";import { enqueueSnackbar } from "notistack";
+;
 
 
 const Cards = ({ cardData }) => {
@@ -78,6 +79,15 @@ const Cards = ({ cardData }) => {
             };
     
             saveBookingDetails(bookingDetails);
+            enqueueSnackbar(`Your wellness appointment has been successfully booked. Click 'My Bookings' to view the details`, 
+                {
+                    variant: 'success',
+                    anchorOrigin: {
+                        vertical: 'top',
+                        horizontal: 'center'
+                    }
+                }
+            );
     
             // Remove the booked slot from the available slots and persist to local storage
             setSlots((prevSlots) => {
