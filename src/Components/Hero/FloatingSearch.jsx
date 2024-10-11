@@ -53,27 +53,17 @@ const FloatingSearchBox = ({ containerData }) => {
 
     const handleSearch = () => {
         if (state && city) {
-            if (!selectedCard) {
-                enqueueSnackbar('Please select your preferred service to proceed with your search.', {
+            if (selectedCard === 'Hospitals') {  //implementing the placeholder modal for this specific link based on the design provided; will refine and enhance it in future
+        
+                navigate(`/medical-centers?state=${state}&city=${city}&service=${selectedCard}`);
+            } else {
+                enqueueSnackbar('Please select the Hospitals category to continue.', {
                     variant: 'warning',
                     anchorOrigin: {
                         vertical: 'top',
                         horizontal: 'center'
                     }
                 })
-            } else {
-                if (selectedCard === 'Hospitals') {  //implementing the placeholder modal for this specific link based on the design provided; will refine and enhance it in future
-            
-                    navigate(`/medical-centers?state=${state}&city=${city}&service=${selectedCard}`);
-                } else {
-                    enqueueSnackbar('Note: The hospital option is currently fully designed for your convenience.', {
-                        variant: 'warning',
-                        anchorOrigin: {
-                            vertical: 'top',
-                            horizontal: 'center'
-                        }
-                    })
-                }
             }
         }
     };
