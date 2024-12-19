@@ -47,7 +47,7 @@ const HospitalCardWithAccordion = () => {
                             fontSize: 'clamp(16px, 2vw, 24px)' 
                         }}
                     >
-                        {hospitalData.length} medical centers available in Alaska
+                        {hospitalData.length} medical {hospitalData.length > 1 ? `centers` : `center`} available in {hospitalLocation.currentCity}, {hospitalLocation.currentState}.
                     </Typography>
                     <Typography 
                         variant='p' 

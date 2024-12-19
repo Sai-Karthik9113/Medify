@@ -234,8 +234,13 @@ const Cards = ({ cardData }) => {
                                     </div>
                                     {openIndex !== index && (
                                         <div className={styles.ratingSection}>
-                                            <div className={styles.ratingContainer}>
-                                                <ThumbsUp /> {rating}
+                                            <div className={styles.ratingContainer} style={{ backgroundColor: rating !== 'Not Available' ? 'var(--apple-green)' : '#b2d8b2' }}>
+                                                {rating === 'Not Available' ? "NA" : (
+                                                    <>
+                                                        <ThumbsUp />
+                                                        {rating}
+                                                    </>
+                                                )}
                                             </div>
                                         </div>
                                     )}
