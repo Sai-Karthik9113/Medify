@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import { styled } from '@mui/material/styles';
 import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, IconButton } from "@mui/material";
@@ -33,16 +33,27 @@ const NavBar = () => {
     const isMobile = useMediaQuery('(max-width: 864px)');
     const [open, setOpen] = useState(false);
     const navigate = useNavigate();
-    const [searchBox, setSearchBox] = useState(false); 
     const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleClickOutside = () => {
+            setIsVisible(false);
+        };
+
+        document.addEventListener('scroll', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('scroll', handleClickOutside);
+        }
+    }, []);
 
     const toggleDrawer = () => {
         setOpen(prev => !prev);
     };
 
     const handleFindDoctorsClick = () => {
-        setSearchBox((prev) => !prev);
-        setIsVisible(searchBox);
+        setIsVisible((prev) => !prev);
+        toggleDrawer();
     };
 
     const list = [
@@ -138,7 +149,7 @@ const NavBar = () => {
                     </ul>
                 </nav>
             )}
-            {searchBox && <SearchBox isVisible={isVisible} />}
+            {isVisible && <SearchBox isVisible={isVisible} />}
         </div>
     );
 };

@@ -10,10 +10,9 @@ import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { uniqueId } from "../../App";
 
-const SearchBox = () => {
+const SearchBox = ({ isVisible }) => {
     const { enqueueSnackbar } = useSnackbar();
     const location = useLocation();
-    const [isVisible, setIsVisible] = useState(false);
     const [city, setCity] = useState("");
     const [cityData, setCityData] = useState([]);
     const [state, setState] = useState("");
@@ -48,11 +47,6 @@ const SearchBox = () => {
         }
 
     }, [state]);
-
-    useEffect(() => {
-
-        setIsVisible(true);
-    }, []);
 
     const handleSearch = () => {
         if (state && city) {
