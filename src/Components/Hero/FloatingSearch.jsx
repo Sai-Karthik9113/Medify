@@ -53,25 +53,24 @@ const FloatingSearchBox = ({ containerData }) => {
 
     const handleSearch = () => {
         if (state && city) {
-            if (selectedCard === 'Hospitals') {  //implementing the placeholder modal for this specific link based on the design provided; will refine and enhance it in future
-        
-                navigate(`/medical-centers?state=${state}&city=${city}&service=${selectedCard}`);
-            } else {
-                enqueueSnackbar('Please select the Hospitals category to continue.', {
+            navigate(`/medical-centers?state=${state}&city=${city}`);
+        } else {
+            if (!state && !city) {
+                enqueueSnackbar("City and state selection is required to continue.", {
                     variant: 'warning',
-                    anchorOrigin: {
-                        vertical: 'top',
-                        horizontal: 'center'
-                    }
-                })
+                });
+            } else if (!city) {
+                enqueueSnackbar("Please select a city to continue.", {
+                    variant: 'warning',
+                });
             }
         }
     };
 
     const handleCitySelection = () => {
         if (!state) {
-            enqueueSnackbar("Please select a state first to view cities.", { 
-                variant: 'info',
+            enqueueSnackbar("Please select a state to view the cities.", { 
+                variant: 'warning',
             });
         }
     }
