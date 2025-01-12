@@ -44,7 +44,7 @@ const AdForDownloadOurApp = () => {
                             alt="Arrow" 
                             style={{
                                 width: 'clamp(24px, 5vw, 49px)',
-                                height: 'auto' // Keep height proportional to the width
+                                height: 'auto'
                             }}
                         />
                     </div>
@@ -110,8 +110,8 @@ const AdForDownloadOurApp = () => {
                         </Button>
                         <Button 
                             style={{ 
-                                width: 'clamp(175px, 5vw, 300px)', 
-                                height: 'clamp(60px, 5vw, 69px)', 
+                                width: 'clamp(175px, 2vw, 300px)', 
+                                height: 'clamp(60px, 2vw, 69px)', 
                                 backgroundColor: '#000000', color: '#ffffff' 
                             }}
                         >
