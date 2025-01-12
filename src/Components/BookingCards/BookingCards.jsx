@@ -256,7 +256,7 @@ const Cards = ({ cardData }) => {
                                                 : handleAccordionToggle(index)
                                             }}
                                         >
-                                            Book FREE Center Visit
+                                            {openIndex === index ? 'Confirm Booking' : 'Book FREE Center Visit'}
                                         </Button>
                                     </div>
                                 </div>
